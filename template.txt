@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>A Short Note on ... | Blog</title>
+    <meta
+      name="description"
+      content="A blog post by Clayton Lie about ... ."
+    />
+
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="../index.html">Blog</a>
+        <nav>
+          <a href="https://nichlay.github.io/personal-website/">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <article class="post">
+        <p class="post-category">...</p>
+        <h1>...</h1>
+        <p class="post-date">...</p>
+
+        <div class="post-content">
+         ...
+        </div>
+
+        <a class="back-link" href="../index.html">← Back to blog</a>
+      </article>
+    </main>
+  </body>
+</html>
+

@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #111111;
+  --muted: #777777;
+  --link: #1a66cc;
+  --category: #cc0000;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.topbar {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.topbar-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  color: var(--text);
+  font-size: 24px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.topbar nav a {
+  color: #555555;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.topbar nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 56px;
+}
+
+.post-list-item {
+  margin: 0 0 26px;
+}
+
+.post-date {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.post-category {
+  margin: 1px 0 0;
+  color: var(--category);
+  font-size: 14px;
+}
+
+.post-list-item h2 {
+  margin: 2px 0 0;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+.post-list-item h2 a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+.post-list-item h2 a:hover {
+  text-decoration: underline;
+}
+
+.post-excerpt {
+  margin: 2px 0 0;
+  max-width: 720px;
+}
+
+.post {
+  max-width: 760px;
+}
+
+.post h1 {
+  margin: 2px 0 4px;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+.post .post-date,
+.post .post-category {
+  font-size: 14px;
+}
+
+.post-content {
+  margin-top: 24px;
+}
+
+.post-content p {
+  margin: 0 0 14px;
+}
+
+.post-content h2 {
+  margin: 28px 0 8px;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 18px 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 28px;
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .topbar-inner,
+  .container {
+    max-width: 100%;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .post h1 {
+    font-size: 26px;
+  }
+}
