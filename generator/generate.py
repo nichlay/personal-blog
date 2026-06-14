@@ -6,7 +6,7 @@ import markdown
 BASE_DIR = Path(__file__).resolve().parent.parent
 GENERATOR_DIR = BASE_DIR / "generator"
 CONTENT_DIR = BASE_DIR / "content"
-PUBLIC_DIR = BASE_DIR / "public"
+PUBLIC_DIR = BASE_DIR / "docs"
 PUBLIC_POSTS_DIR = PUBLIC_DIR / "posts"
 PUBLIC_ASSETS_DIR = PUBLIC_DIR / "assets"
 
@@ -20,14 +20,19 @@ def load_posts():
 
 
 def copy_static_files():
+    """Copy CSS and assets into the public folder."""
+    PUBLIC_DIR.mkdir(parents=True, exist_ok=True)
+    PUBLIC_POSTS_DIR.mkdir(parents=True, exist_ok=True)
+    PUBLIC_ASSETS_DIR.mkdir(parents=True, exist_ok=True)
+
     source_css = GENERATOR_DIR / "style.css"
     target_css = PUBLIC_DIR / "style.css"
+
     if source_css.exists():
         shutil.copyfile(source_css, target_css)
 
     source_assets = GENERATOR_DIR / "assets"
     if source_assets.exists():
-        PUBLIC_ASSETS_DIR.mkdir(parents=True, exist_ok=True)
         for item in source_assets.iterdir():
             target = PUBLIC_ASSETS_DIR / item.name
             if item.is_file():
