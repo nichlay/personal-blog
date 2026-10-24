@@ -1,7 +1,5 @@
 # Clayton Blog
 
-A separate simple static blog inspired by Andrej Karpathy's minimal blog layout.
-
 ## Files
 
 - `index.html` — blog post list
